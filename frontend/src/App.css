@@ -1,0 +1,27 @@
+/* Ensure all containers fill the screen
+html, body, #root {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(./components/BG2.jpeg);
+  background-size: 100% auto;
+  background-position: top center;
+  min-height: 100vh;
+  background-attachment: scroll;
+  width: 100%;
+  background-repeat: no-repeat;
+}
+
+
+#page {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;             
+  width: 100%;                     
+  height: 100%;
+  box-sizing: border-box;
+  padding: 20px;                   
+} */
