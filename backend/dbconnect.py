@@ -4,16 +4,18 @@ from datetime import datetime
 import mariadb
 import random
 import string
+from dotenv import load_dotenv
+import os
 
+load_dotenv()
 app = Flask(__name__)
 CORS(app)  # Allow frontend to access API
 
-# Database connection details
-DB_HOST = "192.168.97.202"  # Use your actual IP or "localhost"
-DB_PORT = 3306
-DB_USER = "jd"
-DB_PASSWORD = "kali"
-DB_NAME = "food_waste"
+DB_HOST = os.getenv("DB_HOST")
+DB_PORT = int(os.getenv("DB_PORT"))
+DB_USER = os.getenv("DB_USER")
+DB_PASSWORD = os.getenv("DB_PASSWORD")
+DB_NAME = os.getenv("DB_NAME")
 
 def get_db_connection():
     return mariadb.connect(
